@@ -37,5 +37,5 @@ workflows:
       - path-filtering/filter:
           base-revision: main
           mapping: |
-            module-one/.* build-module-one true module-one/.circleci/config.yml
-            module-two/.* build-module-two true module-two/.circleci/config.yml
+            module-one/.* build-module-one true ./module-one/.circleci/config.yml
+            module-two/.* build-module-two true ./module-two/.circleci/config.yml
