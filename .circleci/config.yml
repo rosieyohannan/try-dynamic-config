@@ -25,7 +25,10 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! I'm the initial config file"
+          command: "echo Hello, World! I am the initial config file"
+      - run:
+          name: delay
+          command: sleep 30
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
