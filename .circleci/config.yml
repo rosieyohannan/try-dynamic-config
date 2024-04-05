@@ -34,4 +34,4 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - continuation/continue:
-          configuration_path: my-next-config.yml
+          configuration_path: .circleci/my-next-config.yml
