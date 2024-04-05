@@ -4,14 +4,6 @@ version: 2.1
 
 setup: true
 
-parameters:
-  build-module-one:
-    type: boolean
-    default: false
-  build-module-two:
-    type: boolean
-    default: false
-
 orbs:
   path-filtering: circleci/path-filtering@1.0.0
 
@@ -45,5 +37,5 @@ workflows:
       - path-filtering/filter:
           base-revision: main
           mapping: |
-            module-one/.* build-module-one true ./module-one/.circleci/config.yml
-            module-two/.* build-module-two true ./module-two/.circleci/config.yml
+            module-one/.* ./module-one/.circleci/config.yml
+            module-two/.* ./module-two/.circleci/config.yml

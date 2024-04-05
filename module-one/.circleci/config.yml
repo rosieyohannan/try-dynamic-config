@@ -1,10 +1,5 @@
 version: 2.1
 
-parameters:
-  build-module-one:
-    type: boolean
-    default: false
-
 jobs:
   say-hello-module-one:
     docker:
