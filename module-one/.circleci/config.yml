@@ -1,0 +1,21 @@
+version: 2.1
+
+parameters:
+  build-module-one:
+    type: boolean
+    default: "false"
+
+jobs:
+  say-hello-module-one:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello from module one"
+
+workflows:
+  module-one-workflow:
+    jobs:
+      - say-hello-module-one
