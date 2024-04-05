@@ -2,7 +2,7 @@ version: 2.1
 
 parameters:
   build-module-two:
-    type: string
+    type: boolean
     default: "false"
 jobs:
   say-hello-module-two:

@@ -2,7 +2,7 @@ version: 2.1
 
 parameters:
   build-module-one:
-    type: string
+    type: boolean
     default: "false"
 
 jobs:
