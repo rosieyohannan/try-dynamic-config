@@ -7,10 +7,10 @@ setup: true
 parameters:
   build-module-one:
     type: boolean
-    default: "false"
+    default: false
   build-module-two:
     type: boolean
-    default: "false"
+    default: false
 
 orbs:
   path-filtering: circleci/path-filtering@1.0.0

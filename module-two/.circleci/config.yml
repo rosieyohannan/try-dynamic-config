@@ -3,7 +3,7 @@ version: 2.1
 parameters:
   build-module-two:
     type: boolean
-    default: "false"
+    default: false
 jobs:
   say-hello-module-two:
     docker:
