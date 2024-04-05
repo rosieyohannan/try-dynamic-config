@@ -2,6 +2,11 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
+setup: true
+
+orbs:
+  path-filtering: circleci/path-filtering@1.0.0
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -29,3 +34,7 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - say-hello
+      - path-filtering/filter:
+          mapping: |
+            module-one/.* build-module-one true module-one/.circleci/config.yml
+            module-two/.* build-module-two true module-two/.circleci/config.yml
