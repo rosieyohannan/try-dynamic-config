@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello again, World! I'm the next config file"
+          command: "echo Hello again, World! From the next config file"
 
 workflows:
   my-next-workflow:
