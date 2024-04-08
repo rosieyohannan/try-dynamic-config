@@ -1,0 +1,24 @@
+version: 2.1
+
+parameters:
+  build-module-one:
+    type: boolean
+    default: false
+  build-module-two:
+    type: boolean
+    default: false
+
+jobs:
+  no-change:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run:
+          name: "Report back that no change happened"
+          command: "echo No changes!"
+
+workflows:
+  module-one-workflow:
+    jobs:
+      - no-change
