@@ -19,6 +19,6 @@ jobs:
           command: "echo No changes!"
 
 workflows:
-  module-one-workflow:
+  no-change-workflow:
     jobs:
       - no-change
