@@ -24,6 +24,7 @@ workflows:
     jobs:
       - path-filtering/filter:
           base-revision: main
+          config-path: .circleci/no-op.yml
           mapping: | # The mapping will be used to generate the dynamic configuration for all conditions that match.
             .* always-continue true .circleci/shared-config.yml
             src/.* build-code true .circleci/code-config.yml
