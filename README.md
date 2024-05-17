@@ -1,3 +1,3 @@
 # Repo for trying out dynamic config
 
-testing out dynamic config features for docs updates.
+Testing out dynamic config features for docs updates.
