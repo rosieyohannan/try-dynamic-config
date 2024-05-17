@@ -1,21 +1,30 @@
 version: 2.1
 
+# define this file as the setup phase of your dynamic configuration
+setup: true
+
+# define the parameters that will be used to generate the dynamic configuration.
 parameters:
-  build-module-one:
+  always-continue:
+    type: boolean
+    default: false
+  build-code:
+    type: boolean
+    default: false
+  build-docs:
     type: boolean
     default: false
 
-jobs:
-  say-hello-module-one:
-    docker:
-      - image: cimg/base:current
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello from module one"
+# invoke the path-filtering orb to make the filter job available.
+orbs:
+  path-filtering: circleci/path-filtering@1.0.0
 
 workflows:
-  module-one-workflow:
+  setup-workflow:
     jobs:
-      - say-hello-module-one
+      - path-filtering/filter:
+          base-revision: main
+          mapping: | # The mapping will be used to generate the dynamic configuration for all conditions that match.
+            .* always-continue true .circleci/shared-config.yml
+            src/.* build-code true .circleci/code-config.yml
+            doc/.* build-docs true .circleci/docs-config.yml
