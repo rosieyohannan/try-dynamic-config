@@ -10,4 +10,4 @@ jobs:
 workflow:
   no-update-workflow:
     jobs:
-      - no-update
+      - no-updates
