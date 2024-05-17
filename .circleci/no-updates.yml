@@ -19,7 +19,7 @@ jobs:
     steps:
       - run: echo "No updates have been made"
 
-workflow:
+workflows:
   no-update-workflow:
     jobs:
       - no-updates
