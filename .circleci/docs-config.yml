@@ -1,5 +1,16 @@
 version: 2.1
 
+parameters:
+  always-continue:
+    type: boolean
+    default: false
+  build-code:
+    type: boolean
+    default: false
+  build-docs:
+    type: boolean
+    default: false
+
 jobs:
   build-docs:
     docker:
