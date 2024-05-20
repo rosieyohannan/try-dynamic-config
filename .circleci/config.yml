@@ -36,7 +36,7 @@ jobs:
       # The mapping will be used to generate the dynamic configuration for all conditions that match.
       - path-filtering/set-parameters:
           base-revision: main
-          config-path: no-updates.yml
+          config-path: .circleci/no-updates.yml
           mapping: |
             .* always-continue true .circleci/shared-config.yml
             src/.* build-code true .circleci/code-config.yml
