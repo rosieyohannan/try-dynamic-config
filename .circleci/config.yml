@@ -60,4 +60,4 @@ workflows:
   setup-workflow:
     jobs:
       - setup
-        serial-group: << pipeline.project.slug >>/deploy-group
+          serial-group: << pipeline.project.slug >>/deploy-group
