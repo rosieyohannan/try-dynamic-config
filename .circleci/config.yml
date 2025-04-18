@@ -1,7 +1,7 @@
 version: 2.1
 
 # define this file as the setup phase of your dynamic configuration
-setup: true
+#setup: true
 
 # define the parameters that will be used to generate the dynamic configuration.
 parameters:
