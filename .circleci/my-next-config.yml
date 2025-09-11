@@ -1,5 +1,10 @@
 version: 2.1
 
+parameters:
+  image-tag:
+    type: string
+    default: "current"
+    
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
@@ -19,6 +24,7 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello again, World! From the next config file"
+      - run: echo <<pipeline.parameters.image-tag>>
 
 workflows:
   my-next-workflow:
