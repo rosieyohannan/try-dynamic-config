@@ -28,6 +28,7 @@ jobs:
           name: "Say hello"
           command: "echo Hello again, World! From the next config file"
       - run: echo <<pipeline.parameters.image-tag>>
+      - run: echo <<pipeline.parameters.version>>
 
 workflows:
   my-next-workflow:
