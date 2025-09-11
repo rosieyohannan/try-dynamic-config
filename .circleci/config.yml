@@ -3,11 +3,6 @@
 version: 2.1
 
 setup: true
-
-parameters:
-  image-tag:
-    type: string
-    default: "current"
     
 orbs:
   continuation: circleci/continuation@1.0.0
