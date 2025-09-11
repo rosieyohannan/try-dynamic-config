@@ -4,6 +4,11 @@ version: 2.1
 
 setup: true
 
+parameters:
+  image-tag:
+    type: string
+    default: "current"
+    
 orbs:
   continuation: circleci/continuation@1.0.0
 
@@ -39,3 +44,4 @@ workflows:
       - say-hello
       - continuation/continue:
           configuration_path: .circleci/my-next-config.yml
+          parameters: '{"image-tag":"pizza"}'
